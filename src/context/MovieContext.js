@@ -11,6 +11,7 @@ export const MovieProvider = ({ children }) => {
     const [movieList, setMovieList] = useState([]);
 
     const handleClear = () => {
+        setMovieName("")
         setMoviesLoaded(false);
         setMovieList([]);
     };
