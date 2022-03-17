@@ -22,7 +22,7 @@ export const MovieProvider = ({ children }) => {
             return;
         }
         const response = await fetch(
-            `${MOVIE_APP_URL}?apikey=${API_KEY}&plot=full&s=${movieName}`
+            `${MOVIE_APP_URL}?apikey=${API_KEY}&s=${movieName}`
         );
         const data = await response.json();
 
