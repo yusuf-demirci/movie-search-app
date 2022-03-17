@@ -22,7 +22,7 @@ export const MovieProvider = ({ children }) => {
             return;
         }
         const response = await fetch(
-            `${MOVIE_APP_URL}?apikey=${API_KEY}&s=${movieName}`
+            `${MOVIE_APP_URL}?apikey=${API_KEY}&plot=full&s=${movieName}`
         );
         const data = await response.json();
 
@@ -31,8 +31,10 @@ export const MovieProvider = ({ children }) => {
                 throw new Error(data.Error);
             }
 
+            setSearchName(movieName)
             setMovieList(data.Search);
             setMoviesLoaded(true);
+    
         } catch (error) {
             alert(error);
         }

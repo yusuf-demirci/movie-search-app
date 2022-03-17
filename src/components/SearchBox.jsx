@@ -15,10 +15,7 @@ function SearchBox() {
                     type="text"
                     className="search--input"
                     placeholder="search"
-                    onChange={(e) => {
-                        setMovieName(e.target.value);
-                        setSearchName(e.target.value);
-                    }}
+                    onChange={(e) => setMovieName(e.target.value)}
                     value={movieName}
                 />
             </div>
